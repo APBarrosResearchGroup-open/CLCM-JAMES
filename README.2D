@@ -1,34 +1,12 @@
+The folder "src" contains the source codes of the coupled large eddy simulation (LES) Land-Cloud Model (CLCM). The CLCM was built by coupling this SBM model with the most recent version of CM1 (Cloud Model 1; Version 21.1;  Bryan (2003); Bryan (2003); Bryan, G. H. and Fritsch, J. M. (2002)).
 
-Brief User's Guide for running two-dimensional simulations with CM1.
+The core code implementing the spectral bin microphysics (SBM) method is located in "src/dcpm.F". A portion of the code is inherited from the DCPM model, short for Duke Cloud Parcel Model (Duan et al., 2019).
 
-Last updated:  12 August 2008.
+The "namelist.input" files of the three idealized case studies, SAM-default, SAM-redistribute, and SAM-HBR, are stored in the "run" directory, with names of "namelist.input.default", "namelist.input.redistribute", and "namelist.input.hbr", Specifically.
 
-------------------------------------------------------------------------
-Setup:
+The compiled executable file is "cm1.exe" located in "run" directory.
 
-To run a two-dimensional (2D) simulation with x and z as the two dimensions, 
-set ny = 1, sbc = 1, and nbc = 1.
-
-To run a two-dimensional (2D) simulation with y and z as the two dimensions,
-set nx = 1, wbc = 1, and ebc = 1.
-
-NOTE:  A 2D simulation with x and z as the two dimensions will run much 
-faster than an equivalent 2D simulation with y and z as the two dimensions. 
-So, if you have a choice, use the x-z option. 
-
-I have never tested a 2D simulation with x and y as the only two dimensions,
-nor do I expect this to work, so you probably shouldn't try it.
-
-------------------------------------------------------------------------
-Parallelization:
-
-OpenMP (i.e., shared memory parallelization) will work fine for 2D simulations.
-
-MPI (i.e., distributed memory parallelization) is currently not working 
-correctly for 2d simulations in cm1.  A note of caution, though:  the model 
-will actually run in 2D with MPI, but the results are meaningless.
-
-------------------------------------------------------------------------
-
-Questions, comments, suggestions:  send email to gbryan@ucar.edu
-
+Reference:
+Bryan, G. H., & Fritsch, J. M. (2002). “A Benchmark Simulation for Moist Nonhydrostatic Numerical Models.” Mon. Wea. Rev. 130: 2917–28.
+Bryan, George Howard. 2003. “An Investigation of the Convective Region of Numerically Simulated Squall Lines.” PhD Thesis, Pennsylvania State University.
+Duan, Y., Petters, M. D., and Barros, A. P.: Understanding aerosol–cloud interactions through modeling the development of orographic cumulus congestus during IPHEx, Atmos. Chem. Phys., 19, 1413–1437, https://doi.org/10.5194/acp-19-1413-2019, 2019.
