@@ -1,0 +1,12 @@
+The folder "src" contains the source codes of the coupled large eddy simulation (LES) Land-Cloud Model (CLCM). The CLCM was built by coupling this SBM model with the most recent version of CM1 (Cloud Model 1; Version 21.1;  Bryan (2003); Bryan (2003); Bryan, G. H. and Fritsch, J. M. (2002)).
+
+The core code implementing the spectral bin microphysics (SBM) method is located in "src/dcpm.F". A portion of the code is inherited from the DCPM model, short for Duke Cloud Parcel Model (Duan et al., 2019).
+
+The "namelist.input" files of the three idealized case studies, SAM-default, SAM-redistribute, and SAM-HBR, are stored in the "run" directory, with names of "namelist.input.default", "namelist.input.redistribute", and "namelist.input.hbr", Specifically.
+
+The compiled executable file is "cm1.exe" located in "run" directory.
+
+Reference:
+Bryan, G. H., & Fritsch, J. M. (2002). “A Benchmark Simulation for Moist Nonhydrostatic Numerical Models.” Mon. Wea. Rev. 130: 2917–28.
+Bryan, George Howard. 2003. “An Investigation of the Convective Region of Numerically Simulated Squall Lines.” PhD Thesis, Pennsylvania State University.
+Duan, Y., Petters, M. D., and Barros, A. P.: Understanding aerosol–cloud interactions through modeling the development of orographic cumulus congestus during IPHEx, Atmos. Chem. Phys., 19, 1413–1437, https://doi.org/10.5194/acp-19-1413-2019, 2019.
