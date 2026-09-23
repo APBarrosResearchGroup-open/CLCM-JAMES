@@ -6,6 +6,14 @@ The "namelist.input" files of the three idealized case studies, SAM-default, SAM
 
 The compiled executable file is "cm1.exe" located in "run" directory.
 
+License
+
+CLCM is released under the GNU General Public License Version 3 (GPLv3). See the LICENSE file for details.
+
+CLCM incorporates a modified version of CM1 v21.1. CM1 is Copyright © 2024 University Corporation for Atmospheric Research (UCAR) and is distributed under the MIT License. The original CM1 copyright and license notice is retained in README.CM1.
+
+The spectral bin microphysics implementation in src/dcpm.F was developed based in part on the Duke Cloud Parcel Model (DCPM; Duan et al., 2019), with substantial modifications and extensions for CLCM.
+
 Reference:
 Bryan, G. H., & Fritsch, J. M. (2002). “A Benchmark Simulation for Moist Nonhydrostatic Numerical Models.” Mon. Wea. Rev. 130: 2917–28.
 Bryan, George Howard. 2003. “An Investigation of the Convective Region of Numerically Simulated Squall Lines.” PhD Thesis, Pennsylvania State University.
