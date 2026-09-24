@@ -1,4 +1,4 @@
-The folder "src" contains the source codes of the coupled large eddy simulation (LES) Land-Cloud Model (CLCM). The CLCM was built by coupling this SBM model with the most recent version of CM1 (Cloud Model 1; Version 21.1;  Bryan (2003); Bryan (2003); Bryan, G. H. and Fritsch, J. M. (2002)).
+The folder "src" contains the source codes of the coupled large eddy simulation (LES) Land-Cloud Model (CLCM). The CLCM was built by coupling this SBM model with the most recent version of CM1 (Cloud Model 1; Version 21.1; Bryan & Fritsch, 2002; Bryan, 2003).
 
 The core code implementing the spectral bin microphysics (SBM) method is located in "src/dcpm.F". A portion of the code is inherited from the DCPM model, short for Duke Cloud Parcel Model (Duan et al., 2019).
 
